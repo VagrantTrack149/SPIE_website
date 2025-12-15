@@ -10,13 +10,13 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "build": "postcss src/styles.css -o public/styles.css",
-    "watch": "postcss src/styles.css -o public/styles.css --watch"
+    "build": "npx tailwindcss  -i ./src/css/input.css -o ./public/styles/output.css",
+    "watch": "npx tailwindcss  -i ./src/css/input.css -o ./public/styles/ouput.css --watch"
   },
   "dependencies": {
     "express": "^5.2.1",
     "nodemon": "^3.1.11",
-    "postcss": "^8.5.6",
-    "tailwindcss": "^4.1.18"
+    "postcss": "^8.4.39",
+    "tailwindcss": "^3.4.18"
   }
 }
