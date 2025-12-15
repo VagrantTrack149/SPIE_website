@@ -18,3 +18,23 @@ app.listen(PORT, () => {
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'src', 'index.html'));
 });
+
+app.get('/Inicio', (req, res) => {
+  res.sendFile(path.join(__dirname, 'src', 'index.html'));
+});
+
+app.get('/about', (req, res) => {
+  res.sendFile(path.join(__dirname, 'src/pages', 'about.html'));
+});
+
+app.get('/contact', (req, res) => {
+  res.sendFile(path.join(__dirname, 'src/pages', 'contact.html'));
+});
+
+app.get('/Activites', (req, res) => {
+  res.sendFile(path.join(__dirname, 'src/pages', 'Activites.html'));
+});
+
+app.get('/Members', (req, res) => {
+  res.sendFile(path.join(__dirname, 'src/pages', 'members.html'));
+});
