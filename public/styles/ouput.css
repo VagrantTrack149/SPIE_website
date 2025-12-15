@@ -582,8 +582,8 @@ video {
   z-index: 20;
 }
 
-.m-10 {
-  margin: 2.5rem;
+.m-6 {
+  margin: 1.5rem;
 }
 
 .mx-auto {
@@ -643,16 +643,8 @@ video {
   height: auto;
 }
 
-.h-full {
-  height: 100%;
-}
-
 .w-10 {
   width: 2.5rem;
-}
-
-.w-11\/12 {
-  width: 91.666667%;
 }
 
 .w-6 {
@@ -824,8 +816,8 @@ video {
 }
 
 @media (min-width: 640px) {
-  .sm\:w-10\/12 {
-    width: 83.333333%;
+  .sm\:w-9\/12 {
+    width: 75%;
   }
 }
 
