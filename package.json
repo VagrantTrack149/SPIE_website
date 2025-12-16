@@ -3,9 +3,12 @@
   "version": "0.0.1",
   "description": "spie chapter website demo ",
   "license": "ISC",
-  "author": "",
+  "author": "Neil Otniel Moreno Rivera",
   "type": "commonjs",
   "main": "index.js",
+  "engines": {
+    "node": "18.x"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
