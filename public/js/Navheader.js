@@ -22,44 +22,37 @@ function loadNavHeader() {
 function ChangeColorHeader() {
     const ruta = location.pathname;
         console.log("Ruta y archivo:", ruta);
+        const activo_class=['border-b-2', 'border-red-700', 'md:text-white'];
+        const desactivo_class=['bg-brand', 'md:text-fg-brand'];
+        let elemento;
         switch (ruta) {
             case '/Inicio':
-                const inicio = document.getElementById('inicio');
-                console.log(inicio);
-                if (inicio) {
-                    inicio.classList.add('bg-red-700', 'p-1.5');
-                    console.log("Clase agregada a Inicio");
-                }
-
+                elemento = document.getElementById('inicio');
                 break;
             case '/Members':
-                const members = document.getElementById('Members');
-                if (members) {
-                    members.classList.add('bg-red-700', 'p-1.5');
-                }
+                elemento = document.getElementById('Members');
+                
                 break;
             case '/About':
-                const about = document.getElementById('about');
-                if (about) {
-                    about.classList.add('bg-red-700', 'p-1.5');
-                }
+                elemento = document.getElementById('about');
+                
                 break;
             case '/Contact':
-                const contact = document.getElementById('Contact');
-                if (contact) {
-                    contact.classList.add('bg-red-700', 'p-1.5');
-                }
+                elemento = document.getElementById('Contact');
+                
                 break;
             case '/Activites':
-                const Activites = document.getElementById('Activites');
-                if (Activites) {
-                    Activites.classList.add('bg-red-700', 'p-1.5');
-                }
+                elemento = document.getElementById('Activites');
+                
                 break;
             default:
                 console.log("No se encontró la ruta correspondiente para resaltar el menú.");
                 console.log("Ruta actual:", ruta);
                 break;
+        }
+        if (elemento) {
+            elemento.classList.remove(...desactivo_class);
+            elemento.classList.add(...activo_class);
         }
 }        
 document.addEventListener('DOMContentLoaded',() =>{
