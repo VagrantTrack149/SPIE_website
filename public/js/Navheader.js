@@ -27,6 +27,7 @@ function ChangeColorHeader() {
         let elemento;
         switch (ruta) {
             case '/Inicio':
+            case '/':
                 elemento = document.getElementById('inicio');
                 break;
             case '/Members':
@@ -54,7 +55,24 @@ function ChangeColorHeader() {
             elemento.classList.remove(...desactivo_class);
             elemento.classList.add(...activo_class);
         }
-}        
+}
+
+function setupToggle() {
+    document.addEventListener('click', (event) => {
+        const button = event.target.closest('[data-collapse-toggle="navbar-default"]');
+        if (button) {
+            const menu = document.getElementById('navbar-default');
+            if (menu) {
+                menu.classList.toggle('hidden');
+                
+                const isExpanded = button.getAttribute('aria-expanded') === 'true';
+                button.setAttribute('aria-expanded', !isExpanded);
+            }
+        }
+    });
+}
+
+
 document.addEventListener('DOMContentLoaded',() =>{
     navheader= document.getElementById('nav-header');
     //header= document.getElementById('nav-header');
@@ -68,4 +86,5 @@ document.addEventListener('DOMContentLoaded',() =>{
             ChangeColorHeader();
         }
     });
+    setupToggle();
 });

@@ -720,12 +720,22 @@ video {
   width: calc(100% - 12px);
 }
 
+.w-fit {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
 .w-full {
   width: 100%;
 }
 
 .min-w-\[34px\] {
   min-width: 34px;
+}
+
+.max-w-fit {
+  max-width: -moz-fit-content;
+  max-width: fit-content;
 }
 
 .max-w-screen-xl {
