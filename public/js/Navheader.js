@@ -72,10 +72,27 @@ function setupToggle() {
     });
 }
 
+footer=document.createElement("footer");
+function LoadFooter() {
+    return fetch('./components/footer.html')
+        .then(response => response.text())
+        .then(data => {
+            footer.innerHTML = data;
+            document.body.appendChild(footer)
+            //console.log(data);
+            return true;
+        })
+        .catch(error => {
+            console.error('Error en la carga:', error);
+            return false;
+        });
+}
+
 
 document.addEventListener('DOMContentLoaded',() =>{
     navheader= document.getElementById('nav-header');
     //header= document.getElementById('nav-header');
+    footer=document.createElement('footer');
     if (!navheader) {
         console.error('Elemento con id "nav-header" no encontrado.');
     }
@@ -87,4 +104,5 @@ document.addEventListener('DOMContentLoaded',() =>{
         }
     });
     setupToggle();
+    LoadFooter();
 });
