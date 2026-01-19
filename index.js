@@ -70,3 +70,7 @@ app.get('/api/activities', (req, res) => {
     res.json(files);
     });*/
 });
+
+app.get('/sitemap.xml', (req, res) => {
+  res.sendFile(path.join(__dirname, 'sitemap.xml'));
+});
