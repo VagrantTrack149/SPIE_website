@@ -74,3 +74,6 @@ app.get('/api/activities', (req, res) => {
 app.get('/sitemap.xml', (req, res) => {
   res.sendFile(path.join(__dirname, 'sitemap.xml'));
 });
+app.get('/sitemap-2.xml', (req, res) => {
+  res.sendFile(path.join(__dirname, 'sitemap-2.xml'));
+});
